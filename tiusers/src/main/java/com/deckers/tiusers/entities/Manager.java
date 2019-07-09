@@ -1,19 +1,22 @@
-package com.deckers.tiusers;
+package com.deckers.tiusers.entities;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 import javax.validation.constraints.NotBlank;
 
+@Entity
 public class Manager {
 	@Id
-	 @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "CUST_SEQ")
-	 private int Userid;
-	 @NotBlank(message = "first_name is mandatory")
+	   @GeneratedValue(strategy=GenerationType.AUTO)
+	 private long userid;
+	 @NotBlank(message = "Firstname is mandatory")
 		
 	    private String Firstname;
 		 
-		 @NotBlank(message = "last_name is mandatory") 
+		 @NotBlank(message = "Lastname is mandatory") 
 		private String Lastname; 
 		 @NotBlank(message = "Title is mandatory")
 		    private String Title;
@@ -35,9 +38,9 @@ public class Manager {
 		public void setTitle(String title) {
 			Title = title;
 		}
-	/*
-	 * @Override public String toString() { return "Billionaires{" + "id=" + id +
-	 * ", first_name=" + first_name +",last_name =" +last_name+ ", career=" +
-	 * career+ '}'; }
-	 */		 
+		  @Override
+		  public String toString() {
+		        return "Billionaires{" + "userid=" + userid + ", Firstname=" + Firstname +",Lastname =" +Lastname+ ", Title=" + Title+ '}';
+		    }
+
 }
