@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+    <head>
+       <link href="../static/css/Layout.css" th:href="@{/css/layout.css}" rel="stylesheet" />
+         <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+        <title>show</title>
+             <style>
+ 
+ 
+</style>
+    </head>
+    <body>
+        <h1 class="title">show</h1>
+<table  class="table" >
+
+		            <tr  th:each="manager : ${search}">
+              
+		             <td class=" row"> <a th:text="${manager.fullname}">a</a></td>
+		           <td class=" row"> <a th:text="${manager.ntaccount}">a</a></td>
+                	 <td class=" row"> <a th:text="${manager.Title}">b</a></td>
+        		   </tr>
+</table>
+  <br>
+ 	 <table>
+      	 <tr>
+      	 <td> 
+      	 <a th:href="@{/home}"><input type="submit"class="button " value="go home"></a>
+      	 </td>
+      	 <td>
+      	 <form th:action="@{/logout}" method="post">
+    
+        
+            <input type="submit" class="button red" value="Sign Out"/>
+        </form>   
+      	 </td>
+      	 </tr>
+      	 
+      	 </table>
+    </body>
+</html>

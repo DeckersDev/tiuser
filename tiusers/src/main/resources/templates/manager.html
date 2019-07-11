@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+    <head>
+        <title>edit</title>
+  <link href="../static/css/Layout.css" th:href="@{/css/layout.css}" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+    </head>
+   <body>
+             <h1 class="title">edit</h1>
+           <div class="box">
+           <div class="label">new Manager</div>
+           <form   autocomplete="off"  action="#" th:action="@{/manager}" th:object="${manager}" method="post">
+                    
+                       <div>
+	                         <input class="fieldt" type="text" th:field="*{fullname}"  id="name" placeholder="fullname">
+	                          <span th:if="${#fields.hasErrors('fullname')}" th:errors="*{fullname}" ></span> 
+                       </div>
+                               <br>
+                       <!--  <div>
+                            	 <input class="fieldt" type="text" th:field="*{Lastname}"  id="name" placeholder=" Lastname">
+                               	 <span th:if="${#fields.hasErrors('Lastname')}" th:errors="*{Lastname}" ></span>
+                      	</div>
+         	                  <br> -->
+                         <div>        
+	                     	<input class="fieldt" type="text" th:field="*{Title}"  id="name" placeholder="Title">
+	                     	 <span th:if="${#fields.hasErrors('Title')}" th:errors="*{Title}" ></span> 
+                        </div>
+                        
+                        	 <br>
+                        <div>
+	                     	<input class="fieldt" type="text" th:field="*{ntaccount}"  id="name" placeholder="Windows Login (Deckers/Login)">
+	                      <span th:if="${#fields.hasErrors('ntaccount')}" th:errors="*{ntaccount}" ></span> 
+                        </div>
+                        
+                       
+                        
+                       
+                       
+                       
+                        <div >
+                            <div >
+                                <input type="submit"class="button" value="Save">
+                            </div>
+                        </div>    
+                    </form >      
+           </div>
+ 
+                     <br>
+      	 <table>
+      	 <tr>
+      	 <td> 
+      	 <a th:href="@{/home}"><input type="submit"class="button " value="go home"></a>
+      	 </td>
+      	 <td>
+      	 <form th:action="@{/logout}" method="post">
+    
+        
+            <input type="submit" class="button red" value="Sign Out"/>
+        </form>   
+      	 </td>
+      	 </tr>
+      	 
+      	 </table>
+         
+  
+    </body>
+</html>
