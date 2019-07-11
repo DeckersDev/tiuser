@@ -144,23 +144,36 @@ font-size:17px;
 /* 	#d1e0e0 */
 
  .table{
+  width: 100%;
+  overflow-x:auto;
 	background-color:		#f2f2f2;
-	  border-collapse: collapse;
+  border-collapse: collapse; 
 	font-family: 'IBM Plex Sans', sans-serif;
-	
+	 border: 1px solid   #a6a6a6;
+  border-bottom: nil; 
+	  text-align: left;
 } 
+
 .table td{
  border: 1px solid   #a6a6a6;
+   text-align: left;
  
- 
- padding: 15px 32px;
+/*  padding: 15px 32px; */
 }
+.row{
+	  text-align: left;
+		  font-size: 15px;
+		    width: 25%;
+}
+
 .table th{
  border: 1px solid   #a6a6a6;
-
- padding: 15px 32px;
+	border-bottom: nil;
+	
+/*  padding: 15px 32px;
+ */
     font-family: 'IBM Plex Sans', sans-serif;
-    
+
 }
 .searcht[type=text] {
 	
@@ -293,4 +306,8 @@ li > a:hover:before {
    width:400px;
 
   }
+}
+.Table{
+	
+	 /*  overflow-y: auto; */
 }

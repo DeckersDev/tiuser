@@ -11,12 +11,23 @@
     <body>
      
          <h1 class="title">search</h1>
+         <div>
+<ul class="menu">
+<li ><a th:href="@{/list/fullname}">search</a></li>
+<li><a th:href="@{/show}">find</a></li>
+<li><a th:href="@{/manager}">Add</a></li>
+<li ><a th:href="@{/home}">home</a></li>
+</ul>
+</div>
+         
+         <br>
+                 <h1 class="title">New User Manager List</h1>
     <div class="Box">
       <div class="label">find</div>
     <br>
          <form  autocomplete="off"  action="#" th:action="@{/list}" th:object="${manager}" >
          <div></div>
-         <input type="text"  placeholder="enter career" name="search" class="searcht"  id="search" th:value="${search}"/> 
+         <input type="text"  placeholder="enter fullname" name="search" class="searcht"  id="search" th:value="${search}"/> 
          <input type="submit" class="button small" value="search"  />
        
          <div >

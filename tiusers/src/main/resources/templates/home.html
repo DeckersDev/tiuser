@@ -1,11 +1,24 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
     <head>
+           <link href="../static/css/Layout.css" th:href="@{/css/layout.css}" rel="stylesheet" />
+         <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
         <title>Spring Security Example</title>
     </head>
     <body>
         <h1>Welcome!</h1>
 
         <p>Click <a th:href="@{/hello}">here</a> to see a greeting.</p>
+        <a th:href="@{/manager}">Add</a>
+<div>
+<ul class="menu">
+<li ><a th:href="@{/list/fullname}">search</a></li>
+
+<li><a th:href="@{/show}">find</a></li>
+<li><a th:href="@{/manager}">Add</a></li>
+</ul>
+</div>
+
+    <br>
     </body>
 </html>

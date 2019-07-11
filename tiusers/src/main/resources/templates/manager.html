@@ -8,6 +8,16 @@
     </head>
    <body>
              <h1 class="title">edit</h1>
+                      <div>
+<ul class="menu">
+<li ><a th:href="@{/list/fullname}">search</a></li>
+<li><a th:href="@{/show}">find</a></li>
+<li><a th:href="@{/manager}">Add</a></li>
+<li ><a th:href="@{/home}">home</a></li>
+</ul>
+</div>
+         
+         <br>
            <div class="box">
            <div class="label">new Manager</div>
            <form   autocomplete="off"  action="#" th:action="@{/manager}" th:object="${manager}" method="post">
